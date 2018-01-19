@@ -1,4 +1,3 @@
-import os
 import argparse
 
 def read_args():

@@ -1,4 +1,3 @@
-import matplotlib.pyplot as pip
 import matplotlib.pyplot as plt
 from matplotlib import style
 import numpy as np
@@ -8,7 +7,7 @@ class Scatter:
     """Used to generate 2D scatter from KMeans result
     """
 
-    def __init__(self, clr=['r.', 'g.', 'b.', 'y.', 'c.', 'm.', 'firebrick', 'lime', 'white', 'black'], cent_clr="teal"):
+    def __init__(self, clr, cent_clr):
         self.clr = clr
         self.cent_clr = cent_clr
 

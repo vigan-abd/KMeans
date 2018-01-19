@@ -17,5 +17,5 @@ C = [[1.5, 1.8],
 
 alg = KMeans(k=args["k"], max_iter=args["m"], tol=args["p"])
 res = alg.cluster(X, C, args["d"])
-plot = Scatter()
+plot = Scatter(['r.', 'g.', 'b.', 'y.', 'c.', 'm.', 'firebrick', 'lime', 'white', 'black'], "teal")
 plot.show(res)

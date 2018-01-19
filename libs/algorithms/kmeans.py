@@ -1,9 +1,9 @@
 from math import sqrt
-from itertools import combinations
 
 
 class KMeans:
-    """K Means algorithm that supports different distance calculation methods. This is a flat clustering form!
+    """K Means algorithm that supports different distance calculation methods.
+    This is a flat clustering form!
     """
 
     def __init__(self, k=2, max_iter=100, tol=0.001):
@@ -28,7 +28,8 @@ class KMeans:
             ValueError: If number of centroids is less then K value
 
         Returns:
-            {'pts': {'p': float[m], 'c': int}[m], 'cts': float[k][m]}: returns the data with one additional column on the right that specifies the cluster
+            {'pts': {'p': float[m], 'c': int}[m], 'cts': float[k][m]}:
+            returns the data with one additional column on the right that specifies the cluster
         """
         if len(centroids) < self.k:
             raise ValueError(
@@ -70,7 +71,8 @@ class KMeans:
 
             # Find mean point of each cluster and make them as centroids.
             # This is calculated by finding avg of each dimension in each cluster
-            # e.g cluster 0 => C0 = [1/n SUM(p[i][j])]; i=0..n, j=0..m where n is no_points and m is no_dims
+            # e.g cluster 0 => C0 = [1/n SUM(p[i][j])];
+            #       i=0..n, j=0..m where n is no_points and m is no_dims
             # count of points in a cluster
             cnt_clstr_p = [0 for x in range(cent_len)]
             avg_pts = [[0 for x in range(attr_len)] for y in range(
